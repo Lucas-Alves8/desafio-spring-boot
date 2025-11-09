@@ -1,6 +1,8 @@
 package model;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.UuidGenerator;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 
@@ -29,8 +31,13 @@ public class Cliente {
     @Column(name = "maritalStatus", length = 50, nullable = false)
     String maritalStatus;
 
-    @Column()
+    @CreationTimestamp
+    @Column(name = "createdAt")
     LocalDate createdAt;
+
+    @UpdateTimestamp
+    @Column(name = "updateAt")
+    LocalDate updateAt;
 
 
 
