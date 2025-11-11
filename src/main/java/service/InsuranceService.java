@@ -1,6 +1,7 @@
 package service;
 
 import Repository.InsuranceRepositorio;
+import model.Insurance;
 
 public class InsuranceService {
 
@@ -8,5 +9,8 @@ public class InsuranceService {
 
     public InsuranceService(InsuranceRepositorio repository) {
         this.repository = repository;
+    }
+
+    public Insurance createInsuranVehicle(InsuranceVehicleDTO insuranceVehicleDTO) {
     }
 }
